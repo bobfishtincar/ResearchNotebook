@@ -3,7 +3,6 @@ package bdinakar.researchnotebook;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
 
@@ -12,10 +11,12 @@ class Log {
     private String title;
     private HashSet<String> tags;
     private ArrayList<Event> logs;
+    private Date logDate;
     private static final DateFormat DATE_FORMAT = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 
     Log(String input) {
         title = input;
+        logDate = new Date();
     }
 
     void addTags(String input) {
@@ -42,6 +43,8 @@ class Log {
     @Override
     public String toString() {
         String rtn = "";
+        rtn += (new SimpleDateFormat("MM/dd/yyyy HH:mm")).format(logDate);
+        rtn += " ";
         rtn += title;
         rtn += "\n";
         rtn += "Tags: ";
@@ -65,7 +68,7 @@ class Log {
 
         @Override
         public String toString() {
-            return DATE_FORMAT.format(eventDate) + ": " + eventString + "\n";
+            return DATE_FORMAT.format(eventDate) + " " + eventString + "\n";
         }
 
     }
