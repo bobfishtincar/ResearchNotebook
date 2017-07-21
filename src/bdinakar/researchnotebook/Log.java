@@ -1,5 +1,7 @@
 package bdinakar.researchnotebook;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -45,12 +47,30 @@ class Log {
 
                     case ("qq"):
                         sc.close();
+                        save();
                         return;
 
                     default:
                         addLog(line);
                         break;
                 }
+            }
+        }
+    }
+
+    private void save() {
+        BufferedWriter writer = null;
+        try {
+            writer = new BufferedWriter(new FileWriter(toStringHeader()));
+            writer.write(toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                // Close the writer regardless of what happens...
+                writer.close();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
@@ -84,12 +104,18 @@ class Log {
         System.out.println(l);
     }
 
+    public String toStringHeader() {
+        String rtn = "";
+        rtn += (new SimpleDateFormat("MM-dd-yyyy HH:mm")).format(logDate);
+        rtn += " ";
+        rtn += title;
+        return rtn;
+    }
+
     @Override
     public String toString() {
         String rtn = "";
-        rtn += (new SimpleDateFormat("MM/dd/yyyy HH:mm")).format(logDate);
-        rtn += " ";
-        rtn += title;
+        rtn += toStringHeader();
         rtn += "\n";
         rtn += "Initials: ";
         rtn += initials;
