@@ -40,16 +40,13 @@ class Log {
 
             if (split.length != 0) {
                 switch (split[0]) {
-
                     case ("tag"):
                         addTags(split);
                         break;
-
                     case ("qq"):
                         sc.close();
                         save();
                         return;
-
                     default:
                         addLog(line);
                         break;
@@ -61,8 +58,8 @@ class Log {
     private void save() {
         BufferedWriter writer = null;
         try {
-            writer = new BufferedWriter(new FileWriter(toStringHeader()));
-            writer.write(toString());
+            writer = new BufferedWriter(new FileWriter( "ResearchNotebook.txt", true));
+            writer.write("\n" + toString());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
