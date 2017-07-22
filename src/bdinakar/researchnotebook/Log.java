@@ -13,7 +13,6 @@ class Log {
 
     private String title;
     private HashSet<String> initials;
-    private HashSet<String> tags;
     private ArrayList<Event> logs;
     private Date logDate;
     private static final DateFormat DATE_FORMAT = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
@@ -21,7 +20,6 @@ class Log {
     Log(String input) {
         title = input;
         logDate = new Date();
-        tags = new HashSet<>();
         logs = new ArrayList<>();
         initials = new HashSet<>();
     }
@@ -40,9 +38,6 @@ class Log {
 
             if (split.length != 0) {
                 switch (split[0]) {
-                    case ("tag"):
-                        addTags(split);
-                        break;
                     case ("qq"):
                         sc.close();
                         save();
@@ -58,7 +53,7 @@ class Log {
     private void save() {
         BufferedWriter writer = null;
         try {
-            writer = new BufferedWriter(new FileWriter( "ResearchNotebook.txt", true));
+            writer = new BufferedWriter(new FileWriter( toStringHeader()));
             writer.write("\n" + toString());
         } catch (Exception e) {
             e.printStackTrace();
@@ -72,19 +67,6 @@ class Log {
         }
     }
 
-    void addTags(String[] input) {
-        for (int i = 1; i < input.length; ++i) {
-            addTags(input[i]);
-        }
-    }
-
-    void addTags(String input) {
-        String[] split = splitLine(input);
-        for (String i: split) {
-            tags.add(i.toLowerCase());
-        }
-    }
-
     private String[] splitLine(String input) {
         return input.trim().split("\\s+");
     }
@@ -95,7 +77,6 @@ class Log {
 
     public static void main(String[] args) {
         Log l = new Log("title");
-        l.addTags("tag1 tag2 tag3");
         l.addLog("banana");
         l.addLog("apple");
         System.out.println(l);
@@ -116,9 +97,6 @@ class Log {
         rtn += "\n";
         rtn += "Initials: ";
         rtn += initials;
-        rtn += "\n";
-        rtn += "Tags: ";
-        rtn += tags;
         rtn += "\n";
         for (Event e: logs) {
             rtn += e;
