@@ -1,33 +1,106 @@
 package bdinakar.researchnotebook;
 
+import org.opencv.core.Core;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.videoio.VideoCapture;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferByte;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Scanner;
+import java.util.*;
 
 class Log {
 
+    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
     private String title;
     private HashSet<String> initials;
     private ArrayList<Event> logs;
     private Date logDate;
-    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+    private BufferedImage i;
+    private int count;
+    private HashMap<String, BufferedImage> imageSet;
 
     Log(String input) {
         title = input;
         logDate = new Date();
         logs = new ArrayList<>();
         initials = new HashSet<>();
+        imageSet = new HashMap<>();
+    }
+
+    public static void main(String[] args) {
+        Log l = new Log("");
+        l.pic();
+    }
+
+    private void pic() {
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+
+        Mat m = new Mat();
+
+        VideoCapture v = new VideoCapture();
+        v.open(0);
+
+        JFrame frame = new JFrame();
+        frame.setLayout(new FlowLayout());
+        frame.setSize(200, 300);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        JButton button = new JButton("Add Picture.");
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                imageSet.put("image" + ++count + ".jpg", i);
+            }
+        } );
+
+        frame.add(button);
+
+        JLabel label = new JLabel();
+        frame.add(label);
+        frame.setVisible(true);
+
+        while (frame.isVisible()) {
+            v.read(m);
+            i = bufferedImage(m);
+            label.setIcon(new ImageIcon(i));
+            label.repaint();
+        }
+
+    }
+
+    private void saveImage(String fileName, BufferedImage image) {
+        File outputfile = new File(toStringHeader(), fileName);
+        try {
+            ImageIO.write(image, "jpg", outputfile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static BufferedImage bufferedImage(Mat m) {
+        int type = BufferedImage.TYPE_BYTE_GRAY;
+        if (m.channels() > 1) {
+            type = BufferedImage.TYPE_3BYTE_BGR;
+        }
+        BufferedImage image = new BufferedImage(m.cols(), m.rows(), type);
+        m.get(0, 0, ((DataBufferByte) image.getRaster().getDataBuffer()).getData()); // get all the pixels
+        return image;
     }
 
     void addInitials(String input) {
         String[] initialsArray = splitLine(input);
-        for (String i: initialsArray) {
+        for (String i : initialsArray) {
             initials.add(i);
         }
     }
@@ -39,6 +112,9 @@ class Log {
 
             if (split.length != 0) {
                 switch (split[0]) {
+                    case ("pic"):
+                        pic();
+                        break;
                     case ("qq"):
                         sc.close();
                         save();
@@ -59,6 +135,11 @@ class Log {
             f = new File(f, toStringHeader());
             writer = new BufferedWriter(new FileWriter(f));
             writer.write("\n" + toString());
+
+            for (Map.Entry<String, BufferedImage> entry : imageSet.entrySet()) {
+                saveImage(entry.getKey(), entry.getValue());
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -79,13 +160,6 @@ class Log {
         logs.add(new Event(input));
     }
 
-    public static void main(String[] args) {
-        Log l = new Log("title");
-        l.addLog("banana");
-        l.addLog("apple");
-        System.out.println(l);
-    }
-
     public String toStringHeader() {
         String rtn = "";
         rtn += (new SimpleDateFormat("MM-dd-yyyy HH:mm")).format(logDate);
@@ -102,7 +176,7 @@ class Log {
         rtn += "Initials: ";
         rtn += initials;
         rtn += "\n";
-        for (Event e: logs) {
+        for (Event e : logs) {
             rtn += e;
         }
         return rtn;
