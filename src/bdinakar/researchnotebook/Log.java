@@ -1,6 +1,7 @@
 package bdinakar.researchnotebook;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -53,7 +54,10 @@ class Log {
     private void save() {
         BufferedWriter writer = null;
         try {
-            writer = new BufferedWriter(new FileWriter( toStringHeader()));
+            File f = new File(System.getProperty("User.dir"), toStringHeader());
+            f.mkdir();
+            f = new File(f, toStringHeader());
+            writer = new BufferedWriter(new FileWriter(f));
             writer.write("\n" + toString());
         } catch (Exception e) {
             e.printStackTrace();
