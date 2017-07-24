@@ -61,6 +61,7 @@ class Log {
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 imageSet.put("image" + ++count + ".jpg", i);
+                addLog("ADD IMAGE " + count + " HERE:\n\n\n");
             }
         } );
 

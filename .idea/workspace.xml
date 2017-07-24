@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ac27806-1813-4797-841b-3191aa1422e9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/java.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/opencv_320.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ResearchNotebook/bdinakar/researchnotebook/Log$Event.class" afterPath="$PROJECT_DIR$/out/production/ResearchNotebook/bdinakar/researchnotebook/Log$Event.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ResearchNotebook/bdinakar/researchnotebook/Log.class" afterPath="$PROJECT_DIR$/out/production/ResearchNotebook/bdinakar/researchnotebook/Log.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResearchNotebook.iml" afterPath="$PROJECT_DIR$/ResearchNotebook.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bdinakar/researchnotebook/Log.java" afterPath="$PROJECT_DIR$/src/bdinakar/researchnotebook/Log.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,26 +15,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bdinakar/researchnotebook/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+            <state relative-caret-position="300">
+              <caret line="20" column="75" lean-forward="true" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Log.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Log.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bdinakar/researchnotebook/Log.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="57" column="43" lean-forward="false" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+            <state relative-caret-position="90">
+              <caret line="63" column="59" lean-forward="true" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Log#0;class#Log#0" expanded="false" />
-                <element signature="e#1720#1721#0" expanded="true" />
-                <element signature="e#1795#1796#0" expanded="true" />
                 <element signature="method#saveImage#0;class#Log#0" expanded="false" />
                 <element signature="method#bufferedImage#0;class#Log#0" expanded="false" />
                 <element signature="method#addInitials#0;class#Log#0" expanded="false" />
@@ -49,8 +41,8 @@
                 <element signature="method#toStringHeader#0;class#Log#0" expanded="false" />
                 <element signature="method#toString#0;class#Log#0" expanded="false" />
                 <element signature="class#Event#0;class#Log#0" expanded="false" />
-                <element signature="e#5319#5320#0" expanded="true" />
-                <element signature="e#5406#5407#0" expanded="true" />
+                <element signature="e#5382#5383#0" expanded="true" />
+                <element signature="e#5469#5470#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -538,8 +530,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Log#0;class#Log#0" expanded="false" />
-            <element signature="e#1720#1721#0" expanded="true" />
-            <element signature="e#1795#1796#0" expanded="true" />
             <element signature="method#saveImage#0;class#Log#0" expanded="false" />
             <element signature="method#bufferedImage#0;class#Log#0" expanded="false" />
             <element signature="method#addInitials#0;class#Log#0" expanded="false" />
@@ -548,8 +538,8 @@
             <element signature="method#toStringHeader#0;class#Log#0" expanded="false" />
             <element signature="method#toString#0;class#Log#0" expanded="false" />
             <element signature="class#Event#0;class#Log#0" expanded="false" />
-            <element signature="e#5319#5320#0" expanded="true" />
-            <element signature="e#5406#5407#0" expanded="true" />
+            <element signature="e#5382#5383#0" expanded="true" />
+            <element signature="e#5469#5470#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -569,8 +559,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Log#0;class#Log#0" expanded="false" />
-            <element signature="e#1720#1721#0" expanded="true" />
-            <element signature="e#1795#1796#0" expanded="true" />
             <element signature="method#saveImage#0;class#Log#0" expanded="false" />
             <element signature="method#bufferedImage#0;class#Log#0" expanded="false" />
             <element signature="method#addInitials#0;class#Log#0" expanded="false" />
@@ -579,8 +567,8 @@
             <element signature="method#toStringHeader#0;class#Log#0" expanded="false" />
             <element signature="method#toString#0;class#Log#0" expanded="false" />
             <element signature="class#Event#0;class#Log#0" expanded="false" />
-            <element signature="e#5319#5320#0" expanded="true" />
-            <element signature="e#5406#5407#0" expanded="true" />
+            <element signature="e#5382#5383#0" expanded="true" />
+            <element signature="e#5469#5470#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -640,15 +628,39 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/07-24-2017 13:10 title/image1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-24-2017 13:13 title/07-24-2017 13:13 title">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-24-2017 13:13 title/image2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bdinakar/researchnotebook/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="75" lean-forward="true" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bdinakar/researchnotebook/Log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="57" column="43" lean-forward="false" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+        <state relative-caret-position="90">
+          <caret line="63" column="59" lean-forward="true" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Log#0;class#Log#0" expanded="false" />
-            <element signature="e#1720#1721#0" expanded="true" />
-            <element signature="e#1795#1796#0" expanded="true" />
             <element signature="method#saveImage#0;class#Log#0" expanded="false" />
             <element signature="method#bufferedImage#0;class#Log#0" expanded="false" />
             <element signature="method#addInitials#0;class#Log#0" expanded="false" />
@@ -657,22 +669,9 @@
             <element signature="method#toStringHeader#0;class#Log#0" expanded="false" />
             <element signature="method#toString#0;class#Log#0" expanded="false" />
             <element signature="class#Event#0;class#Log#0" expanded="false" />
-            <element signature="e#5319#5320#0" expanded="true" />
-            <element signature="e#5406#5407#0" expanded="true" />
+            <element signature="e#5382#5383#0" expanded="true" />
+            <element signature="e#5469#5470#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/07-24-2017 13:10 title/image1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bdinakar/researchnotebook/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
