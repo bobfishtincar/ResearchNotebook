@@ -28,14 +28,12 @@ class Log {
     private Date logDate;
     private BufferedImage i;
     private int count;
-    private HashMap<String, BufferedImage> imageSet;
 
     Log(String input) {
         title = input;
         logDate = new Date();
         logs = new ArrayList<>();
         initials = new HashSet<>();
-        imageSet = new HashMap<>();
     }
 
     private void pic() {
@@ -54,7 +52,8 @@ class Log {
         JButton button = new JButton("Add Picture.");
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                imageSet.put("image" + ++count + ".jpg", i);
+//                imageSet.put("image" + ++count + ".jpg", i);
+                saveImage("image" + ++count + ".jpg", i);
                 addLog("ADD IMAGE " + count + " HERE:\n\n\n");
             }
         } );
@@ -101,6 +100,8 @@ class Log {
     }
 
     void startLogs(Scanner sc) {
+        File f = new File(System.getProperty("User.dir"), toStringHeader());
+        f.mkdir();
         while (true) {
             String line = sc.nextLine();
             String[] split = splitLine(line);
@@ -112,7 +113,6 @@ class Log {
                         break;
                     case ("qq"):
                         sc.close();
-                        save();
                         return;
                     default:
                         addLog(line);
@@ -126,15 +126,9 @@ class Log {
         BufferedWriter writer = null;
         try {
             File f = new File(System.getProperty("User.dir"), toStringHeader());
-            f.mkdir();
-            f = new File(f, toStringHeader());
+            f = new File(f, toStringHeader() + ".txt");
             writer = new BufferedWriter(new FileWriter(f));
             writer.write("\n" + toString());
-
-            for (Map.Entry<String, BufferedImage> entry : imageSet.entrySet()) {
-                saveImage(entry.getKey(), entry.getValue());
-            }
-
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -153,6 +147,7 @@ class Log {
 
     void addLog(String input) {
         logs.add(new Event(input));
+        save();
     }
 
     public String toStringHeader() {

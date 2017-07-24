@@ -18,8 +18,8 @@ public class Main {
         l.addInitials(initials);
 
         System.out.println("You are now ready to start logging events!");
-        System.out.println("To add a tag, type the word \"tag\" before the tags.");
         System.out.println("Type \"qq\" to save the log and quit.");
+        System.out.println("Type \"pic\" to add a picture to the log.");
 
         l.startLogs(sc);
 
