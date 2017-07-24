@@ -22,8 +22,6 @@ public class Main {
         System.out.println("Type \"pic\" to add a picture to the log.");
 
         l.startLogs(sc);
-
-        System.out.println(l);
     }
 
 }

@@ -113,7 +113,8 @@ class Log {
                         break;
                     case ("qq"):
                         sc.close();
-                        return;
+                        System.out.println(toString());
+                        System.exit(0);
                     default:
                         addLog(line);
                         break;
