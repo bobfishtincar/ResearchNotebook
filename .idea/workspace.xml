@@ -15,35 +15,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bdinakar/researchnotebook/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="20" column="75" lean-forward="true" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Log.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bdinakar/researchnotebook/Log.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="63" column="59" lean-forward="true" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Log#0;class#Log#0" expanded="false" />
-                <element signature="method#saveImage#0;class#Log#0" expanded="false" />
-                <element signature="method#bufferedImage#0;class#Log#0" expanded="false" />
-                <element signature="method#addInitials#0;class#Log#0" expanded="false" />
-                <element signature="method#startLogs#0;class#Log#0" expanded="false" />
-                <element signature="method#save#0;class#Log#0" expanded="false" />
-                <element signature="method#toStringHeader#0;class#Log#0" expanded="false" />
-                <element signature="method#toString#0;class#Log#0" expanded="false" />
-                <element signature="class#Event#0;class#Log#0" expanded="false" />
-                <element signature="e#5382#5383#0" expanded="true" />
-                <element signature="e#5469#5470#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -459,7 +436,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -479,7 +455,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -530,6 +506,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Log#0;class#Log#0" expanded="false" />
+            <element signature="method#pic#0;class#Log#0" expanded="false" />
             <element signature="method#saveImage#0;class#Log#0" expanded="false" />
             <element signature="method#bufferedImage#0;class#Log#0" expanded="false" />
             <element signature="method#addInitials#0;class#Log#0" expanded="false" />
@@ -538,8 +515,8 @@
             <element signature="method#toStringHeader#0;class#Log#0" expanded="false" />
             <element signature="method#toString#0;class#Log#0" expanded="false" />
             <element signature="class#Event#0;class#Log#0" expanded="false" />
-            <element signature="e#5382#5383#0" expanded="true" />
-            <element signature="e#5469#5470#0" expanded="true" />
+            <element signature="e#5253#5254#0" expanded="true" />
+            <element signature="e#5340#5341#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -559,6 +536,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Log#0;class#Log#0" expanded="false" />
+            <element signature="method#pic#0;class#Log#0" expanded="false" />
             <element signature="method#saveImage#0;class#Log#0" expanded="false" />
             <element signature="method#bufferedImage#0;class#Log#0" expanded="false" />
             <element signature="method#addInitials#0;class#Log#0" expanded="false" />
@@ -567,8 +545,8 @@
             <element signature="method#toStringHeader#0;class#Log#0" expanded="false" />
             <element signature="method#toString#0;class#Log#0" expanded="false" />
             <element signature="class#Event#0;class#Log#0" expanded="false" />
-            <element signature="e#5382#5383#0" expanded="true" />
-            <element signature="e#5469#5470#0" expanded="true" />
+            <element signature="e#5253#5254#0" expanded="true" />
+            <element signature="e#5340#5341#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -646,21 +624,14 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bdinakar/researchnotebook/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="75" lean-forward="true" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bdinakar/researchnotebook/Log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="63" column="59" lean-forward="true" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+        <state relative-caret-position="405">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Log#0;class#Log#0" expanded="false" />
+            <element signature="method#pic#0;class#Log#0" expanded="false" />
             <element signature="method#saveImage#0;class#Log#0" expanded="false" />
             <element signature="method#bufferedImage#0;class#Log#0" expanded="false" />
             <element signature="method#addInitials#0;class#Log#0" expanded="false" />
@@ -669,9 +640,17 @@
             <element signature="method#toStringHeader#0;class#Log#0" expanded="false" />
             <element signature="method#toString#0;class#Log#0" expanded="false" />
             <element signature="class#Event#0;class#Log#0" expanded="false" />
-            <element signature="e#5382#5383#0" expanded="true" />
-            <element signature="e#5469#5470#0" expanded="true" />
+            <element signature="e#5253#5254#0" expanded="true" />
+            <element signature="e#5340#5341#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bdinakar/researchnotebook/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="75" lean-forward="true" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>

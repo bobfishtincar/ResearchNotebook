@@ -1,7 +1,6 @@
 package bdinakar.researchnotebook;
 
 import org.opencv.core.Core;
-import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.videoio.VideoCapture;
 
@@ -37,11 +36,6 @@ class Log {
         logs = new ArrayList<>();
         initials = new HashSet<>();
         imageSet = new HashMap<>();
-    }
-
-    public static void main(String[] args) {
-        Log l = new Log("");
-        l.pic();
     }
 
     private void pic() {
