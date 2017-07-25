@@ -76,6 +76,7 @@ class Log {
         File outputfile = new File(toStringHeader(), fileName);
         try {
             ImageIO.write(image, "jpg", outputfile);
+            System.out.println("Image " + fileName + " saved.");
         } catch (IOException e) {
             e.printStackTrace();
         }
