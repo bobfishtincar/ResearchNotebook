@@ -52,7 +52,6 @@ class Log {
         JButton button = new JButton("Add Picture.");
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-//                imageSet.put("image" + ++count + ".jpg", i);
                 saveImage("image" + ++count + ".jpg", i);
                 addLog("ADD IMAGE " + count + " HERE:\n\n\n");
             }
@@ -82,7 +81,7 @@ class Log {
         }
     }
 
-    public static BufferedImage bufferedImage(Mat m) {
+    private static BufferedImage bufferedImage(Mat m) {
         int type = BufferedImage.TYPE_BYTE_GRAY;
         if (m.channels() > 1) {
             type = BufferedImage.TYPE_3BYTE_BGR;
